@@ -34,6 +34,8 @@ header p{
    background-color: #EEEEEE;
     display:flex;
     flex-direction: column;
+    margin-top: 23%;
+    margin-bottom: 20%;
 }
 .selectionbar{
     background-color:#EEEEEE;
@@ -54,6 +56,10 @@ header p{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.botao-selecao h5{
+    margin-left: 25%;
+    margin-right: 25%;
 }
 .selectionbar h5{
     color: #FFFFFF;
@@ -142,10 +148,21 @@ header p{
     justify-content:space-evenly;
     background-color:#FFFFFF;
     border-radius: 9px;
+    border: 5px;
     margin-left: 15px;
+}
+.selecionados{
+    border:#32B72F 6px solid;
+}
+.escondido{
+    display: none;
 }
 .img-food{
     width: 155px;
     height: 87px;
     margin-left: 10px;
+}
+.activebutton{
+    background-color: #32B72F;
+
 }

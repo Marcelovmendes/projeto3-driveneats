@@ -18,21 +18,7 @@
         <div class="container">
             <h2>Primeiro, seu prato</h2>
             <div class="comidas">
-                <div class="food">
-                    <div class="img-food">
-                        <img src="../assets/frango_yin_yang 1.png"/>
-                    </div>
-                    <h3>Frango Ying Yang</h3>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <h4>R$14,90</h4>
-                </div><div class="food">
-                    <div class="img-food">
-                        <img src="../assets/frango_yin_yang 1.png"/>
-                    </div>
-                    <h3>Frango Ying Yang</h3>
-                    <p>Um pouco de batata, um pouco de salada</p>
-                    <h4>R$14,90</h4>
-                </div>
+                <div onclick="selectedfoods(this)">
                 <div class="food">
                     <div class="img-food">
                         <img src="../assets/frango_yin_yang 1.png"/>
@@ -41,10 +27,31 @@
                     <p>Um pouco de batata, um pouco de salada</p>
                     <h4>R$14,90</h4>
                 </div>
-                
+                </div>
+                <div onclick="selectedfoods(this)">
+                <div class="food">
+                    <div class="img-food">
+                        <img src="../assets/frango_yin_yang 1.png"/>
+                    </div>
+                    <h3>Frango Ying Yang</h3>
+                    <p>Um pouco de batata, um pouco de salada</p>
+                    <h4>R$14,90</h4>
+                </div>
+                </div>
+                <div onclick="selectedfoods(this)">
+                <div class="food">
+                    <div class="img-food">
+                        <img src="../assets/frango_yin_yang 1.png"/>
+                    </div>
+                    <h3>Frango Ying Yang</h3>
+                    <p>Um pouco de batata, um pouco de salada</p>
+                    <h4>R$14,90</h4>
+                </div>
+            </div>
             </div>
             <h2>Agora, sua bebida</h2>
             <div class="bebidas">
+                <div  onclick="selecteddrinks(this)">
                 <div class="food">
                     <div class="img-food">
                         <img src="../assets/coquinha_gelada 1.png"/>
@@ -53,7 +60,9 @@
                     <p>Lata 350ml</p>
                     <h4>R$4,90</h4>
                 </div>
-                <div class="food">
+        </div>
+        <div onclick="selecteddrinks(this)">
+                    <div class="food">
                      <div class="img-food">
                         <img src="../assets/coquinha_gelada 1.png"/>
                     </div>
@@ -61,6 +70,8 @@
                     <p>Lata 350ml</p>
                     <h4>R$4,90</h4>
                 </div>
+            </div>
+            <div onclick="selecteddrinks(this)">
                 <div class="food">
                     <div class="img-food">
                         <img src="../assets/coquinha_gelada 1.png"/>
@@ -70,8 +81,10 @@
                     <h4>R$4,90</h4>
                 </div>
             </div>
-            <h2>Agora, sua bebida</h2>
-            <div class="sobremesas">
+        </div>
+            <h2>Por fim, sua sobremes</h2> 
+                <div class="sobremesas">
+               <div onclick="selecteddessert(this)">
                 <div class="food">
                     <div class="img-food">
                         <img src="../assets/pudim 1.png"/>
@@ -80,7 +93,9 @@
                     <p>Apenas pudim</p>
                     <h4>R$7,90</h4>
                 </div>
-                <div class="food">
+        </div>
+               <div  onclick="selecteddessert(this)">
+                    <div class="food">
                      <div class="img-food">
                         <img src="../assets/pudim 1.png"/>
                     </div>
@@ -88,6 +103,8 @@
                     <p>Apenas pudim</p>
                     <h4>R$7,90</h4>
                 </div>
+            </div>
+            <div  onclick="selecteddessert(this)">
                 <div class="food">
                     <div class="img-food">
                         <img src="../assets/pudim 1.png"/>
@@ -98,7 +115,7 @@
                 </div>
             </div>
         </div>
-        <div class="selectionbar">
+        <div onclick="selectioncheck()">
             <div class="botao-selecao">
                 <h5>Selecione os 3 itens
                     para fechar o pedido</h5>
