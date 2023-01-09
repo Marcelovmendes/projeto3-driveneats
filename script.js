@@ -1,20 +1,22 @@
-// primeira funcionalidade alterar aparencia ao clicar
+function selectedfoods(selected1,selectedtxt){
 
-function selectedfoods(selected1){
-    //pegar a div selecionada anteriormente
-    //remover a class selecionada
-    //exclusão mutua
     const selectedbefore1= document.querySelector('.comidas .selecionados');
+  
     if(selectedbefore1!== null){
     selectedbefore1.classList.remove('selecionados');
     }
-  
-//pegar a div que for selecionado
-// adicionar border color green na div selecionada
+
 selected1.classList.add('selecionados');
 comida = selected1;
  selectioncheck();
+ const elementtxt =document.querySelector( selectedtxt + ' .tittle');
+ const elementprice =document.querySelector( selectedtxt + ' .price');
+ infoprato= elementtxt;
+ infopreco= elementprice;
+ console.log(elementtxt);
 }
+let infoprato; 
+let infopreco;
 let comida;
 function selecteddrinks(selected2){
 
@@ -45,5 +47,7 @@ function selectioncheck(){
     if(comida !== undefined && bebida !== undefined && sobremesa !== undefined){
         const check = document.querySelector('.botao-selecao');
         check.classList.add('activebutton');
+       check.innerHTML = 'Fechar pedido';
+       document.querySelector('.botao-selecao').removeAttribute('disabled');
        }
    }
