@@ -9,16 +9,15 @@ function selectedfoods(selected1,selectedtxt){
 selected1.classList.add('selecionados');
 comida = selected1;
  selectioncheck();
- const elementtxt =document.querySelector( selectedtxt + ' .tittle');
+ const elementtxt =document.querySelector( selectedtxt + ' .title');
  const elementprice =document.querySelector( selectedtxt + ' .price');
  infoprato= elementtxt;
- infopreco= elementprice;
- console.log(elementtxt);
+ infopreco1= elementprice;
 }
 let infoprato; 
-let infopreco;
+let infopreco1;
 let comida;
-function selecteddrinks(selected2){
+function selecteddrinks(selected2,selectedtxt2){
 
     const selectedbefore2= document.querySelector('.bebidas .selecionados');
 
@@ -29,9 +28,15 @@ function selecteddrinks(selected2){
     selected2.classList.add('selecionados');
     bebida = selected2;
     selectioncheck();
+    const elementtxt =document.querySelector( selectedtxt2 + ' .title');
+    const elementprice =document.querySelector( selectedtxt2 + ' .price');
+ infobebida= elementtxt;
+ infopreco2= elementprice;
 }
+let infobebida;
+let infopreco2;
 let bebida;
-function selecteddessert(selected3){
+function selecteddessert(selected3,selectedtxt3){
 
     const selectedbefore3= document.querySelector('.sobremesas .selecionados');
     if(selectedbefore3!== null){
@@ -40,9 +45,14 @@ function selecteddessert(selected3){
     selected3.classList.add('selecionados');
     sobremesa = selected3;
     selectioncheck();
+    const elementtxt =document.querySelector( selectedtxt3 + ' .title');
+    const elementprice =document.querySelector( selectedtxt3 + ' .price');
+ infosobremesa= elementtxt;
+ infopreco3= elementprice;
 }
+let infosobremesa;
+let infopreco3;
 let sobremesa;
-// segunda funcionalidade verificação de pedidos selecionados e o botao de seleção muda o texto, a cor e fica ativavel 
 function selectioncheck(){
     if(comida !== undefined && bebida !== undefined && sobremesa !== undefined){
         const check = document.querySelector('.botao-selecao');
@@ -50,4 +60,25 @@ function selectioncheck(){
        check.innerHTML = 'Fechar pedido';
        document.querySelector('.botao-selecao').removeAttribute('disabled');
        }
+   }
+   
+   function finishwpp(){
+    infopreco1= infopreco1.replace('R$', '');
+    infopreco2= infopreco2.replace('R$', '');
+    infopreco3= infopreco3.replace('R$', '');
+    
+    infopreco1= infopreco1.replace(',', '.');
+    infopreco2= infopreco2.replace(',', '.');
+    infopreco3= infopreco3.replace(',', '.');
+
+    let precofinal= Number(infopreco1) + Number(infopreco2) + Number(infopreco3);
+    let dm = `Ola, gostaria de fazer o pedido:
+    - Prato: ${infoprato}
+    - Bebida: ${infobebida}
+    - SObremesa: ${infoprobremesa}
+     Total: R$ ${precofinal.toFixed(2)}`;
+     const wppweb = encodeURIComponent(dm);
+     window.open(`https://wa.me/32988076888?text=${wppweb}`);
+     console.log(wppweb);
+
    }
